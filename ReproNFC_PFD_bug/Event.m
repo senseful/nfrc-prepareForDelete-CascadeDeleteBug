@@ -1,24 +1,33 @@
 #import "Event.h"
 #import "EventParent.h"
 
-
 @implementation Event
 
 @dynamic timeStamp;
 @dynamic hasMovedUp;
 @dynamic parent;
 
-- (void)prepareForDeletion {
-    NSLog(@"Prepare for deletion");
-	
+- (void)updateLastEventInContext:(NSManagedObjectContext *)context {
+    // warning: do not call self.<anything> in this method when it is called with a delay, since the object would have already been deleted
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Event"];
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"timeStamp" ascending:NO];
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
-    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    NSArray *results = [context executeFetchRequest:fetchRequest error:nil];
     NSAssert(results, nil);
     Event *lastEvent = results.lastObject;
     NSLog(@"Updating event: %@", lastEvent.timeStamp);
     lastEvent.hasMovedUp = @YES;
+}
+
+- (void)prepareForDeletion {
+    NSLog(@"Prepare for deletion");
+    
+    // (CUSTOMIZATION_POINT C)
+#ifndef Workaround_C
+    [self updateLastEventInContext:self.managedObjectContext]; // C1: causes the bug
+#else
+    [self performSelector:@selector(updateLastEventInContext:) withObject:self.managedObjectContext afterDelay:0]; // C2: doesn't cause the bug
+#endif
 	
     [super prepareForDeletion];
 }

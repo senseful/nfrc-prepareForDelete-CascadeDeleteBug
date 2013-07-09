@@ -96,8 +96,20 @@
     EventParent *parent = event.parent;
     
     NSLog(@"Deleting event: %@", event.timeStamp);
-    [context deleteObject:parent];
-    //[context deleteObject:event]; // comment and uncomment this line to reproduce or fix the error, respectively.
+    
+    // (CUSTOMIZATION_POINT A)
+    [context deleteObject:parent]; // A1: this line should always run
+#ifdef Workaround_A
+    [context deleteObject:event]; // A2: this line will fix the bug
+#endif
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
@@ -182,7 +194,12 @@
             
         case NSFetchedResultsChangeUpdate:
             NSLog(@"Update detected on row: %d", indexPath.row);
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            // (CUSTOMIZATION_POINT B)
+#ifndef Workaround_B
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath]; // B1: causes bug
+#else
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] withObject:anObject]; // B2: doesn't cause bug
+#endif
             break;
             
         case NSFetchedResultsChangeMove:
@@ -210,6 +227,10 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+}
+- (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object
+{
     cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
 }
 
