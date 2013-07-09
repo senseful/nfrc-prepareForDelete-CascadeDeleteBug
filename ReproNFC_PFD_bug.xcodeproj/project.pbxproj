@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAB352D3178B997800034136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB352D2178B997800034136 /* UIKit.framework */; };
+		AAB352D5178B997800034136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB352D4178B997800034136 /* Foundation.framework */; };
+		AAB352D7178B997800034136 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB352D6178B997800034136 /* CoreGraphics.framework */; };
+		AAB352D9178B997800034136 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB352D8178B997800034136 /* CoreData.framework */; };
+		AAB352DF178B997800034136 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAB352DD178B997800034136 /* InfoPlist.strings */; };
+		AAB352E1178B997800034136 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB352E0178B997800034136 /* main.m */; };
+		AAB352E5178B997800034136 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB352E4178B997800034136 /* AppDelegate.m */; };
+		AAB352E7178B997800034136 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AAB352E6178B997800034136 /* Default.png */; };
+		AAB352E9178B997800034136 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAB352E8178B997800034136 /* Default@2x.png */; };
+		AAB352EB178B997800034136 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAB352EA178B997800034136 /* Default-568h@2x.png */; };
+		AAB352EE178B997800034136 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB352EC178B997800034136 /* MainStoryboard.storyboard */; };
+		AAB352F1178B997800034136 /* ReproNFC_PFD_bug.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAB352EF178B997800034136 /* ReproNFC_PFD_bug.xcdatamodeld */; };
+		AAB352F4178B997900034136 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB352F3178B997900034136 /* MasterViewController.m */; };
+		AAB35308178B9F3700034136 /* EventParent.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB35307178B9F3700034136 /* EventParent.m */; };
+		AAB3530B178BB0E200034136 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB3530A178BB0E200034136 /* Event.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AAB352CF178B997800034136 /* ReproNFC_PFD_bug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReproNFC_PFD_bug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB352D2178B997800034136 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AAB352D4178B997800034136 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AAB352D6178B997800034136 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AAB352D8178B997800034136 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AAB352DC178B997800034136 /* ReproNFC_PFD_bug-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReproNFC_PFD_bug-Info.plist"; sourceTree = "<group>"; };
+		AAB352DE178B997800034136 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AAB352E0178B997800034136 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AAB352E2178B997800034136 /* ReproNFC_PFD_bug-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReproNFC_PFD_bug-Prefix.pch"; sourceTree = "<group>"; };
+		AAB352E3178B997800034136 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AAB352E4178B997800034136 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AAB352E6178B997800034136 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AAB352E8178B997800034136 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AAB352EA178B997800034136 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AAB352ED178B997800034136 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		AAB352F0178B997800034136 /* ReproNFC_PFD_bug.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReproNFC_PFD_bug.xcdatamodel; sourceTree = "<group>"; };
+		AAB352F2178B997800034136 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		AAB352F3178B997900034136 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		AAB35306178B9F3700034136 /* EventParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventParent.h; sourceTree = "<group>"; };
+		AAB35307178B9F3700034136 /* EventParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventParent.m; sourceTree = "<group>"; };
+		AAB35309178BB0E200034136 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		AAB3530A178BB0E200034136 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAB352CC178B997800034136 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB352D3178B997800034136 /* UIKit.framework in Frameworks */,
+				AAB352D5178B997800034136 /* Foundation.framework in Frameworks */,
+				AAB352D7178B997800034136 /* CoreGraphics.framework in Frameworks */,
+				AAB352D9178B997800034136 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAB352C6178B997800034136 = {
+			isa = PBXGroup;
+			children = (
+				AAB352DA178B997800034136 /* ReproNFC_PFD_bug */,
+				AAB352D1178B997800034136 /* Frameworks */,
+				AAB352D0178B997800034136 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAB352D0178B997800034136 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAB352CF178B997800034136 /* ReproNFC_PFD_bug.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAB352D1178B997800034136 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAB352D2178B997800034136 /* UIKit.framework */,
+				AAB352D4178B997800034136 /* Foundation.framework */,
+				AAB352D6178B997800034136 /* CoreGraphics.framework */,
+				AAB352D8178B997800034136 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAB352DA178B997800034136 /* ReproNFC_PFD_bug */ = {
+			isa = PBXGroup;
+			children = (
+				AAB352E3178B997800034136 /* AppDelegate.h */,
+				AAB352E4178B997800034136 /* AppDelegate.m */,
+				AAB352EC178B997800034136 /* MainStoryboard.storyboard */,
+				AAB352F2178B997800034136 /* MasterViewController.h */,
+				AAB352F3178B997900034136 /* MasterViewController.m */,
+				AAB352EF178B997800034136 /* ReproNFC_PFD_bug.xcdatamodeld */,
+				AAB35309178BB0E200034136 /* Event.h */,
+				AAB3530A178BB0E200034136 /* Event.m */,
+				AAB35306178B9F3700034136 /* EventParent.h */,
+				AAB35307178B9F3700034136 /* EventParent.m */,
+				AAB352DB178B997800034136 /* Supporting Files */,
+			);
+			path = ReproNFC_PFD_bug;
+			sourceTree = "<group>";
+		};
+		AAB352DB178B997800034136 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAB352DC178B997800034136 /* ReproNFC_PFD_bug-Info.plist */,
+				AAB352DD178B997800034136 /* InfoPlist.strings */,
+				AAB352E0178B997800034136 /* main.m */,
+				AAB352E2178B997800034136 /* ReproNFC_PFD_bug-Prefix.pch */,
+				AAB352E6178B997800034136 /* Default.png */,
+				AAB352E8178B997800034136 /* Default@2x.png */,
+				AAB352EA178B997800034136 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAB352CE178B997800034136 /* ReproNFC_PFD_bug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAB352FA178B997900034136 /* Build configuration list for PBXNativeTarget "ReproNFC_PFD_bug" */;
+			buildPhases = (
+				AAB352CB178B997800034136 /* Sources */,
+				AAB352CC178B997800034136 /* Frameworks */,
+				AAB352CD178B997800034136 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReproNFC_PFD_bug;
+			productName = ReproNFC_PFD_bug;
+			productReference = AAB352CF178B997800034136 /* ReproNFC_PFD_bug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAB352C7178B997800034136 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = AAB352CA178B997800034136 /* Build configuration list for PBXProject "ReproNFC_PFD_bug" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AAB352C6178B997800034136;
+			productRefGroup = AAB352D0178B997800034136 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAB352CE178B997800034136 /* ReproNFC_PFD_bug */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAB352CD178B997800034136 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB352DF178B997800034136 /* InfoPlist.strings in Resources */,
+				AAB352E7178B997800034136 /* Default.png in Resources */,
+				AAB352E9178B997800034136 /* Default@2x.png in Resources */,
+				AAB352EB178B997800034136 /* Default-568h@2x.png in Resources */,
+				AAB352EE178B997800034136 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAB352CB178B997800034136 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB352E1178B997800034136 /* main.m in Sources */,
+				AAB352E5178B997800034136 /* AppDelegate.m in Sources */,
+				AAB352F1178B997800034136 /* ReproNFC_PFD_bug.xcdatamodeld in Sources */,
+				AAB352F4178B997900034136 /* MasterViewController.m in Sources */,
+				AAB35308178B9F3700034136 /* EventParent.m in Sources */,
+				AAB3530B178BB0E200034136 /* Event.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AAB352DD178B997800034136 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAB352DE178B997800034136 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AAB352EC178B997800034136 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAB352ED178B997800034136 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAB352F8178B997900034136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AAB352F9178B997900034136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAB352FB178B997900034136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ReproNFC_PFD_bug/ReproNFC_PFD_bug-Prefix.pch";
+				INFOPLIST_FILE = "ReproNFC_PFD_bug/ReproNFC_PFD_bug-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AAB352FC178B997900034136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ReproNFC_PFD_bug/ReproNFC_PFD_bug-Prefix.pch";
+				INFOPLIST_FILE = "ReproNFC_PFD_bug/ReproNFC_PFD_bug-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAB352CA178B997800034136 /* Build configuration list for PBXProject "ReproNFC_PFD_bug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB352F8178B997900034136 /* Debug */,
+				AAB352F9178B997900034136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAB352FA178B997900034136 /* Build configuration list for PBXNativeTarget "ReproNFC_PFD_bug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB352FB178B997900034136 /* Debug */,
+				AAB352FC178B997900034136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AAB352EF178B997800034136 /* ReproNFC_PFD_bug.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AAB352F0178B997800034136 /* ReproNFC_PFD_bug.xcdatamodel */,
+			);
+			currentVersion = AAB352F0178B997800034136 /* ReproNFC_PFD_bug.xcdatamodel */;
+			path = ReproNFC_PFD_bug.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AAB352C7178B997800034136 /* Project object */;
+}

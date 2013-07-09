@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="11G63b" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Event" representedClassName="Event">
+        <attribute name="hasMovedUp" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventParent" inverseName="child" inverseEntity="EventParent" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="EventParent" representedClassName="EventParent" syncable="YES">
+        <relationship name="child" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Event" inverseName="parent" inverseEntity="Event" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Event" positionX="261" positionY="189" width="128" height="90"/>
+        <element name="EventParent" positionX="160" positionY="192" width="128" height="60"/>
+    </elements>
+</model>
