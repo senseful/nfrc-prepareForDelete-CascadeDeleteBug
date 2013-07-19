@@ -1,13 +1,15 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-// uncomment 0 or 1 of the following:
-//#define Workaround_A
-//#define Workaround_B
-//#define Workaround_C
+// set 0 or 1 of the following to YES:
 
-// when 0 are uncommented, the bug will occur
-// when 1 of these are uncommented, a specific workaround for the bug will be implemented
+extern BOOL kWorkaroundA;
+extern BOOL kWorkaroundB;
+extern BOOL kWorkaroundC;
+
+// when 0 are set to YES, the bug will occur
+// when 1 of these is set to YES, that specific workaround for the bug will be implemented
+// Note: you can now customize the workaround used at run time by selecting the a value in the left bar button item
 
 @class EventParent;
 

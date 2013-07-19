@@ -15,7 +15,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
@@ -46,6 +46,11 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+}
+- (IBAction)workaroundChanged:(UISegmentedControl *)sender {
+    kWorkaroundA = sender.selectedSegmentIndex == 1;
+    kWorkaroundB = sender.selectedSegmentIndex == 2;
+    kWorkaroundC = sender.selectedSegmentIndex == 3;
 }
 
 #pragma mark - Table View
@@ -99,9 +104,9 @@
     
     // (CUSTOMIZATION_POINT A)
     [context deleteObject:parent]; // A1: this line should always run
-#ifdef Workaround_A
-    [context deleteObject:event]; // A2: this line will fix the bug
-#endif
+    if (kWorkaroundA) {
+        [context deleteObject:event]; // A2: this line will fix the bug
+    }
     
     NSError *error = nil;
     if (![context save:&error]) {
@@ -195,11 +200,11 @@
         case NSFetchedResultsChangeUpdate:
             NSLog(@"Update detected on row: %d", indexPath.row);
             // (CUSTOMIZATION_POINT B)
-#ifndef Workaround_B
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath]; // B1: causes bug
-#else
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] withObject:anObject]; // B2: doesn't cause bug
-#endif
+            if (!kWorkaroundB) {
+                [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath]; // B1: causes bug
+            } else {
+                [self configureCell:[tableView cellForRowAtIndexPath:indexPath] withObject:anObject]; // B2: doesn't cause bug
+            }
             break;
             
         case NSFetchedResultsChangeMove:
